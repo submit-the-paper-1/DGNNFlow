@@ -1,5 +1,5 @@
 bench_out_16378/
 bench_out_batch_16378/
 
-graph_results_Delphes_torch.json
 check.ipynb
+.DS_Store
