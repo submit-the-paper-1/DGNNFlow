@@ -1,5 +1,5 @@
-bench_out_16378/
-bench_out_batch_16378/
+bench_out/
+bench_out_batch/
 
-check.ipynb
 .DS_Store
+try.ipynb
