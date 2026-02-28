@@ -3,7 +3,9 @@
 This repository contains implementation for *DGNNFlow*, a novel streaming dataflow architecture for real-time dynamic GNN inference.
 The dataflow diagram of DGNNFlow is as shown in the following figure.
 
-![DGNNFlow Diagram](DGNNFlow_diagram.jpg)
+<p align="center">
+  <img src="DGNNFlow_diagram.jpg">
+</p>
 
 This repository contains two main directories:
 1. DGNNFlow_HW/: this directory contains necessary files for implementation and use of DGNNFlow architecture.
