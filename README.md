@@ -4,7 +4,7 @@ This repository contains implementation for *DGNNFlow*, a novel streaming datafl
 The dataflow diagram of DGNNFlow is as shown in the following figure.
 
 <p align="center">
-  <img src="Architecture.pdf">
+  <img src="Architecture.jpg">
 </p>
 
 This repository contains two main directories:
