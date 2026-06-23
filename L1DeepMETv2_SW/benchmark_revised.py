@@ -375,7 +375,7 @@ def main() -> None:
     ap.add_argument(
         "--batch_sweep",
         type=str,
-        default="",
+        default='1,2,4,8,16',
         help="Optional comma-separated micro-batch sizes to sweep (e.g., '1,2,4,8,16'). Empty => batch=1 only.",
     )
     ap.add_argument("--max_neighbors", type=int, default=255, help="max_num_neighbors for radius_graph")
@@ -383,7 +383,7 @@ def main() -> None:
     ap.add_argument("--run_cpu", type=int, default=1, help="Run CPU backends")
     ap.add_argument("--run_gpu", type=int, default=1, help="Run GPU backends (requires CUDA)")
     ap.add_argument("--run_compile", type=int, default=1, help="Also run torch.compile variants")
-    ap.add_argument("--cpu_threads", type=int, default=0, help="If >0, set torch.set_num_threads and OMP/MKL threads")
+    ap.add_argument("--cpu_threads", type=int, default=0, help="If >0, set torch.set_num_threads and OMP/MKL threads")      # not need
     ap.add_argument("--outdir", type=str, default="bench_out", help="Output directory")
 
     args = ap.parse_args()

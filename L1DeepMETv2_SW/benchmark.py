@@ -36,7 +36,7 @@ class Timing:
 
     @property
     def compute_ms(self) -> float:
-        return self.prep_ms + self.graph_ms + self.forward_ms
+        return self.prep_ms + self.forward_ms
 
     @property
     def transfer_ms(self) -> float:
@@ -375,12 +375,12 @@ def main() -> None:
     ap.add_argument("--ckpt", type=str, required=True, help="Checkpoint path (e.g., .../last.pth.tar)")
     ap.add_argument("--is_delphes", type=int, default=1, help="1 for Delphes PDG mapping, 0 otherwise")
     ap.add_argument("--deltaR", type=float, default=0.4, help="radius_graph cutoff")
-    ap.add_argument("--num_graphs", type=int, default=1000, help="Number of measured graphs (excluding warmup)")
-    ap.add_argument("--warmup", type=int, default=100, help="Warmup graphs per backend (excluded)")
+    ap.add_argument("--num_graphs", type=int, default=16384, help="Number of measured graphs (excluding warmup)")
+    ap.add_argument("--warmup", type=int, default=128, help="Warmup graphs per backend (excluded)")
     ap.add_argument(
         "--batch_sweep",
         type=str,
-        default="",
+        default='1,2,4,8,16',
         help="Optional comma-separated micro-batch sizes to sweep (e.g., '1,2,4,8,16'). Empty => batch=1 only.",
     )
     ap.add_argument("--max_neighbors", type=int, default=255, help="max_num_neighbors for radius_graph")
